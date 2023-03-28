@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int m,n=0,sum=0;
+    cin >> m;		    
+    while (sum<=m) {      //使得sum不能超过m
+        n++;              //n自增1，应在sum数值的前面，如不，sum在大于m时，会加多1位数值
+		sum+=n;		            //1+2+...+n
+    }
+    cout << n;            //输出第几行
+    return 0;
+}
