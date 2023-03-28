@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+//此代码默认m > n
+int gcd(int m, int n) {
+    while (n != 0) {
+        int r = m % n;
+        m = n;
+        n = r;
+    }
+    return m;
+}
+
+int main() {
+    int m, n;
+    cin >> m >> n;
+    cout << gcd(m, n) << endl;
+    return 0;
+}
+//首先，我们定义了一个函数 gcd，它接受两个参数 m 和 n，分别代表待求最大公约数的两个正整数。在函数体内，我们使用 while 循环进行辗转相除的计算，直到余数 n 等于 0 为止。在每次循环中，我们将 m 和 n 分别赋值为 n 和 m % n，以便在下一次循环中继续计算它们的最大公约数。当 n 等于 0 时，说明 m 和 n 的最大公约数已经被求出，返回 m 即可。
+
+//在 main 函数中，我们首先读入两个正整数 m 和 n，然后调用函数 gcd 计算它们的最大公约数，并输出结果。
