@@ -1,0 +1,14 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0, n;
+    cin >> n;		      //cin会根据变量类型，提取相应长度的字节；这里是int类型
+    while (n != 0) {  //根据题目要求，当条件为假时，结束循环体
+        sum += n;     //累计相加
+        cin >> n;	    //while循环，依次提取输入的字符 
+    }
+    cout << sum;
+    return 0;
+}
